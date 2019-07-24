@@ -1,0 +1,103 @@
+/* BASE BLOCKS */
+
+.card {
+   background:$index-car-background-colour;
+}
+
+/* STANDARD BLOCKS */
+
+.block {
+    padding:$block-padding;
+}
+
+.block-light {
+    @extend .block;
+    @include add-background($light-colour);
+}
+
+.block-center {
+    text-align:center !important;
+}
+
+.block-content {
+    background-color:#A9A9A9;
+    padding:10px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.block-content > ul {
+  padding-left:5%;
+}
+
+/* INDEX BLOCKS */
+
+section:only-child div.index-car-block, section:first-child div.index-car-block {
+    @include add-border(2px, $base-font-colour, "all");
+}
+
+.index-car-block {
+    padding:10px 0 10px 0;
+    margin:0;
+    background:$index-car-background-colour;
+    width:100%;
+    @include add-border(2px, $base-font-colour, "standard");
+}
+
+.index-car-img-block {
+    @include add-border(2px, $base-font-colour, "right");
+}
+
+.index-car-desc-block {
+    @include add-border(2px, $base-font-colour, "right");
+    padding:$block-padding;
+}
+
+.index-car-butt-block {
+    padding:$block-padding;
+}
+
+.index-car-detail {
+    margin-bottom:$block-padding;
+    text-align:center;
+}
+
+.index-desc-container {
+    text-align:left;
+}
+
+
+/* CAR PAGE BLOCKS */
+
+.price-block {
+    background-color:$primary-blue;
+    @include border-radius(20px);
+    text-align:center;
+    color:$secondary-white;
+    height:90px;
+    padding-top:$h-margin;
+    padding-bottom:$h-margin;
+    font-size:30px;
+    margin-bottom:$block-padding;
+    margin-top:$block-padding;
+}
+
+.car-slides-holder {
+    text-align:center;
+}
+
+.car-page-right-col {
+  margin-left: 0px;
+}
+
+
+/* FOOTER BLOCKS */
+
+.footer-block {
+    height:100%;
+}
+
+/* OTHER BLOCKS */
+.car-desc-block-admin {
+    border-right:0 !important;
+}

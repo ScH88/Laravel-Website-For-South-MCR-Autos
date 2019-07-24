@@ -1,0 +1,66 @@
+/* BUTTONS */
+
+.flex-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    overflow: auto;
+}
+
+.btn-default {
+  @include add-background($primary-blue);
+  @include add-border(2px, lighten($primary-blue, 20%), "all");
+  @include border-radius(8px);
+}
+
+.page-item > .page-link  {
+  @include add-border(2px, lighten($primary-blue, 20%), "all");
+  @include add-background($primary-blue);
+}
+
+.page-item.active > .page-link, .page-item.disabled > .page-link, .page-item.active > .page-link:hover  {
+  @include add-border(2px, $primary-blue, "all");
+  @include add-background($secondary-white);
+}
+
+.btn-primary {
+    @include add-background($primary-blue);
+    @include add-border(2px, lighten($primary-blue, 20%), "all");
+    @include border-radius(8px);
+    color:#FFF;
+    font-weight:bold;
+    height:auto;
+    font-size: 2em;
+    white-space: normal;
+    word-wrap: break-word;
+    padding-top:15px;
+    padding-left:10px;
+    padding-bottom:15px;
+    padding-right:10px;
+}
+
+.btn-secondary {
+    @extend .btn-primary;
+    font-size: 1.5em;
+}
+
+.btn-primary:hover, .btn-secondary:hover, btn-default:hover, .page-item > .page-link:hover {
+    background:lighten($primary-blue, 5%);
+    @include add-border(2px, lighten($primary-blue, 20%), "all");
+}
+
+.btn-primary:hover:active, .btn-secondary:hover:active, btn-default:hover:active, .page-item > .page-link:hover:active {
+    background:darken($primary-blue, 10%);
+    @include add-border(2px, darken($primary-blue, 20%), "all");
+}
+
+.btn-primary:focus, .btn-primary:active, .btn-secondary:focus, .btn-secondary:active,
+btn-default:focus, btn-default:active, .page-item > .page-link:focus, .page-item > .page-link:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn-primary:active:focus, .btn-secondary:active:focus, btn-default:active:focus, .page-item > .page-link:focus {
+    background:darken($primary-blue, 5%) !important;
+}

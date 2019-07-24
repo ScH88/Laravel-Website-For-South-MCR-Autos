@@ -1,0 +1,9 @@
+/* FORM COMPONENTS */
+
+.form-control {
+    font-size: 1.3em;
+    width:100%;
+    color:$base-font-colour;
+    @include border-radius(8px);
+    @include add-border(1px, $base-font-colour, "all");
+}

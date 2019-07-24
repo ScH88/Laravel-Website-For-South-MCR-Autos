@@ -1,0 +1,23 @@
+/* FOOTER */
+
+.footer-main {
+
+    margin-top:$footer-margin;
+    @include add-background($primary-blue);
+    min-height:200px;
+    padding:$block-padding;
+    font-size:1.2em;
+
+    a {
+        color:#FFF;
+    }
+
+    ul {
+        margin:0;
+        padding:0;
+    }
+    li {
+        line-height:1.5em;
+        list-style:none;
+    }
+}
