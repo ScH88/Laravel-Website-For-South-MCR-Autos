@@ -116,8 +116,8 @@ class PagesController extends Controller
       //...subdirectory in the views directory, the $data array and the following function that defines the from, to...
       //... and subject fields of the email, with the $data as the actual content
         Mail::send('emails.carSaleRequest', $data, function($message) use ($data) {
-          $message->from('karl@southmcrautos.co.uk');
-          $message->to('karl@southmcrautos.co.uk');
+          $message->from('user@email.com');
+          $message->to('user@email.com');
           $message->subject('Car Sale Request From '.$data['name']);
         });
         //Redirect to the "message-sent" page
